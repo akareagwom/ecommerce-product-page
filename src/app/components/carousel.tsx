@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
@@ -14,18 +14,26 @@ const Carousel = () => {
             <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
-            slidesPerView={3}
+            slidesPerView={1}
             navigation
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
+            // pagination={{ clickable: true }}
+            // scrollbar={{ draggable: true }}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      ...
+      <SwiperSlide>
+        <Image w={'100%'} src="images/image-product-1.jpg"/>
+      </SwiperSlide>
+      <SwiperSlide>
+      <Image w={'100%'} src="images/image-product-2.jpg"/>
+      </SwiperSlide>
+      <SwiperSlide>
+      <Image w={'100%'} src="images/image-product-3.jpg"/>
+      </SwiperSlide>
+      <SwiperSlide>
+      <Image w={'100%'} src="images/image-product-4.jpg"/>
+      </SwiperSlide>
+
     </Swiper>
         </Box>
      );
