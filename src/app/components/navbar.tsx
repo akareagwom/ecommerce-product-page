@@ -21,12 +21,14 @@ const NavBar = () => {
                 isOpen={isOpen}
                 placement='left'
                 onClose={onClose}
+                
                 // finalFocusRef={btnRef}
                 >
-                    <DrawerContent>
-                        <Tabs display={'block'} variant={'none'}>
-                            <TabList display={'block'}>
-                                <Tab><DrawerCloseButton/></Tab>
+                    <DrawerContent  bg={'white'} >
+                        <Tabs w={'16%'} display={'block'} variant={'none'}>
+                            <DrawerCloseButton/>
+                            <TabList mt={4} display={'block'}>
+                                <Tab></Tab>
                                 <Tab>Collections</Tab>
                                 <Tab>Men</Tab>
                                 <Tab>Women</Tab>
