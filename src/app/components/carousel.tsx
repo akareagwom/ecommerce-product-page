@@ -1,4 +1,4 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
@@ -15,7 +15,12 @@ const Carousel = () => {
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}
-            navigation
+            navigation={{
+              prevEl: ".swiper-button-prev",
+              nextEl: ".swiper-button-next",
+            }}
+            
+    
             // pagination={{ clickable: true }}
             // scrollbar={{ draggable: true }}
             onSlideChange={() => console.log('slide change')}
@@ -35,6 +40,10 @@ const Carousel = () => {
       </SwiperSlide>
 
     </Swiper>
+    <Flex alignItems={'center'} pos={'relative'}  bottom={'60'} justifyContent='space-between' mt={6}>
+      <Image  w={8} h={8} bg={'white'} borderRadius={'50%'} p={1} className="swiper-button-prev" src="images/icon-previous.svg" />
+      <Image  w={8} h={8} bg={'white'} borderRadius={'50%'} p={1} className="swiper-button-next" src="images/icon-next.svg" />
+    </Flex>
         </Box>
      );
 }
