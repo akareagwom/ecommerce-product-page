@@ -2,7 +2,7 @@ import { Box, Button, Card, CardBody, Flex, Heading, Image, Text } from "@chakra
 
 const CartItem = () => {
     return ( 
-        <Box p={'6%'} mb={'20%'}>
+        <Box w={{base:"",lg:"60%"}} p={'6%'} mb={'20%'}>
             <Text textTransform={'uppercase'} color={'hsl(26, 100%, 55%)'}>  Sneaker Company</Text>
             <Heading my={'4%'}>Fall Limited Edition Sneakers</Heading>
             <Text>

@@ -8,8 +8,10 @@ const LandingPage = () => {
     return ( 
         <Box>
             <NavBar/>
-            <Carousel/>
-            <CartItem/>
+            <Box display={{base:"block",lg:"flex"}}>
+                <Carousel/>
+                <CartItem/>
+            </Box>
         </Box>
      );
 }

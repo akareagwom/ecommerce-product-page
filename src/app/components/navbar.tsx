@@ -17,7 +17,7 @@ const NavBar = () => {
             alignItems={'baseline'} 
             width={'35%'} 
             justifyContent={{base:'space-between',lg:"space-around"}}
-            
+
             >
                 <Image display={{base:"block",lg:"none"}} onClick={onOpen} src="images/icon-menu.svg" alt="Logo" mb={5} />
                 <Drawer
@@ -56,11 +56,11 @@ const NavBar = () => {
                 <Box>
                 
                     <Image onClick={onOpen} src="images/icon-cart.svg" />
-                <Modal isOpen={isOpen} onClose={onClose}>
+                {/* <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalContent>
                         <ModalBody></ModalBody>
                     </ModalContent>
-                </Modal>
+                </Modal> */}
                 </Box>
                 <Image src="images/image-avatar.png" w={'30px'} />
             </Flex>
