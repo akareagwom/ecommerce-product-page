@@ -1,4 +1,4 @@
-import { Box, Drawer, DrawerCloseButton, DrawerContent, Flex, Image, Tab, TabList, Tabs, Text,useDisclosure,Button } from "@chakra-ui/react";
+import { Box, Drawer, DrawerCloseButton, DrawerContent, Flex, Image, Tab, TabList, Tabs, Text,useDisclosure,Button, Modal, ModalContent, ModalBody } from "@chakra-ui/react";
 import { useRef } from "react";
 
 const NavBar = () => {
@@ -10,13 +10,16 @@ const NavBar = () => {
         <Flex 
         justifyContent={'space-around'}
         alignItems={'baseline'}
-        py={'5%'}
+        py={{base:'5%', lg: '2%'}}
         boxShadow={'0 4px 8px 0 rgba(0, 0, 0, 0.2)'}
         >
-            <Flex alignItems={'baseline'} width={'35%'} justifyContent={'space-between'}>
-            <Button variant={'none'}  colorScheme='none' onClick={onOpen}>
-                <Image src="images/icon-menu.svg" alt="Logo" mb={5} />
-            </Button>
+            <Flex 
+            alignItems={'baseline'} 
+            width={'35%'} 
+            justifyContent={{base:'space-between',lg:"space-around"}}
+            
+            >
+                <Image display={{base:"block",lg:"none"}} onClick={onOpen} src="images/icon-menu.svg" alt="Logo" mb={5} />
                 <Drawer
                 isOpen={isOpen}
                 placement='left'
@@ -28,7 +31,6 @@ const NavBar = () => {
                         <Tabs w={'16%'} display={'block'} variant={'none'}>
                             <DrawerCloseButton/>
                             <TabList mt={4} display={'block'}>
-                                <Tab></Tab>
                                 <Tab>Collections</Tab>
                                 <Tab>Men</Tab>
                                 <Tab>Women</Tab>
@@ -40,9 +42,26 @@ const NavBar = () => {
                 </Drawer>
                 <Text fontWeight={700} fontSize={25}>sneakers</Text>
             </Flex>
+            <Tabs display={{base:"none",lg:"flex"}} variant={'none'}>
+                            <TabList>
+                                <Tab>Collections</Tab>
+                                <Tab>Men</Tab>
+                                <Tab>Women</Tab>
+                                <Tab>About</Tab>
+                                <Tab>Contact</Tab>
+                            </TabList>
+                        </Tabs>
            
             <Flex alignItems={'center'} w={'20%'} justifyContent='space-between'>
-                <Image src="images/icon-cart.svg" />
+                <Box>
+                
+                    <Image onClick={onOpen} src="images/icon-cart.svg" />
+                <Modal isOpen={isOpen} onClose={onClose}>
+                    <ModalContent>
+                        <ModalBody></ModalBody>
+                    </ModalContent>
+                </Modal>
+                </Box>
                 <Image src="images/image-avatar.png" w={'30px'} />
             </Flex>
         </Flex>
