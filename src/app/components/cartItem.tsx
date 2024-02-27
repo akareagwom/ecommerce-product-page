@@ -16,16 +16,18 @@ const CartItem = () => {
                 </Flex>
                 <Text color={'hsl(220, 14%, 75%)'} textDecor={'line-through'}>$250.00</Text>
             </Flex>
-            <Card bg={'hsl(223, 64%, 98%)'}>
-                <CardBody>
-                    <Flex justifyContent={'space-between'} alignItems={'center'}>
-                        <Image src="images/icon-minus.svg"/>
-                        <Text>0</Text>
-                        <Image src="images/icon-plus.svg"/>
-                    </Flex>
-                </CardBody>
-            </Card>
-            <Button py={'9%'} mt={'6%'} px={'8%'} w={'100%'} bg={'hsl(26, 100%, 55%)'}>Add to cart</Button>
+            <Box display={{base:"block",lg:"flex"}}>
+                <Card bg={'hsl(223, 64%, 98%)'}>
+                    <CardBody>
+                        <Flex justifyContent={'space-between'} alignItems={'center'}>
+                            <Image src="images/icon-minus.svg"/>
+                            <Text>0</Text>
+                            <Image src="images/icon-plus.svg"/>
+                        </Flex>
+                    </CardBody>
+                </Card>
+                <Button py={'9%'} mt={'6%'} px={'8%'} w={'100%'} bg={'hsl(26, 100%, 55%)'}>Add to cart</Button>
+            </Box>
         </Box>
      );
 }
