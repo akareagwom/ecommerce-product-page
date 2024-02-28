@@ -6,7 +6,7 @@ import CartItem from "../components/cartItem";
 
 const LandingPage = () => {
     return ( 
-        <Box>
+        <Box bg={'white'}>
             <NavBar/>
             <Box display={{base:"block",lg:"flex"}}>
                 <Carousel/>
