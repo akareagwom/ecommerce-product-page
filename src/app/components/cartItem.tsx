@@ -1,6 +1,9 @@
 import { Box, Button, Card, CardBody, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { useState } from "react";
 
 const   CartItem = () => {
+    const [count,setCount]= useState()
+
     return ( 
         <Box w={{base:"",lg:"60%"}} mt={{base:'0',lg:"8px"}} p={'6%'} mb={'20%'}>
             <Text textTransform={'uppercase'} color={'hsl(26, 100%, 55%)'}>  Sneaker Company</Text>
