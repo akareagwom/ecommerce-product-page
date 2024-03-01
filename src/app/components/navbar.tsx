@@ -56,13 +56,6 @@ const NavBar = () => {
             <Flex alignItems={'center'} w={'20%'} justifyContent='space-between'>
                 <Box>
                     <CartModal />
-                
-                    
-                {/* <Modal isOpen={isOpen} onClose={onClose}>
-                    <ModalContent>
-                        <ModalBody></ModalBody>
-                    </ModalContent>
-                </Modal> */}
                 </Box>
                 <Image src="images/image-avatar.png" w={'30px'} />
             </Flex>
