@@ -1,5 +1,6 @@
 import { Box, Drawer, DrawerCloseButton, DrawerContent, Flex, Image, Tab, TabList, Tabs, Text,useDisclosure,Button, Modal, ModalContent, ModalBody } from "@chakra-ui/react";
 import { useRef } from "react";
+import CartModal from "./cartModal";
 
 const NavBar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -54,8 +55,9 @@ const NavBar = () => {
            
             <Flex alignItems={'center'} w={'20%'} justifyContent='space-between'>
                 <Box>
+                    <CartModal />
                 
-                    <Image onClick={onOpen} src="images/icon-cart.svg" />
+                    
                 {/* <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalContent>
                         <ModalBody></ModalBody>
