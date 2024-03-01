@@ -1,4 +1,4 @@
-import { Box,Image,useDisclosure,Modal,ModalBody,ModalContent, ModalHeader } from "@chakra-ui/react";
+import { Box,Image,useDisclosure,Modal,ModalBody,ModalContent, ModalHeader, Text } from "@chakra-ui/react";
 
 const CartModal = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -16,8 +16,10 @@ const CartModal = () => {
                         >
                             Cart
                         </ModalHeader>
-                        <ModalBody>
-
+                        <ModalBody
+                        py={{base:'15%', lg: '25%'}}
+                        >
+                            <Text textAlign={'center'}>Your cart is empty</Text>
                         </ModalBody>
                     </ModalContent>
                 </Modal>
