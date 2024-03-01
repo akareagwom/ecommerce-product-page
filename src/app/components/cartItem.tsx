@@ -2,7 +2,12 @@ import { Box, Button, Card, CardBody, Flex, Heading, Image, Text } from "@chakra
 import { useState } from "react";
 
 const   CartItem = () => {
-    const [count,setCount]= useState()
+    const [count,setCount]= useState(0)
+
+
+    const plusHandle =()=>{
+        
+    }
 
     return ( 
         <Box w={{base:"",lg:"60%"}} mt={{base:'0',lg:"8px"}} p={'6%'} mb={'20%'}>
