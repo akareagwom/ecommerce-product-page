@@ -9,6 +9,10 @@ const   CartItem = () => {
         setCount(count + 1);
         console.log(count)
     }
+    const minusHandle =()=>{
+        setCount(count  1);
+        console.log(count)
+    }
 
     return ( 
         <Box w={{base:"",lg:"60%"}} mt={{base:'0',lg:"8px"}} p={'6%'} mb={'20%'}>
