@@ -6,7 +6,8 @@ const   CartItem = () => {
 
 
     const plusHandle =()=>{
-        
+        setCount(count + 1);
+        console.log(count)
     }
 
     return ( 
@@ -28,7 +29,7 @@ const   CartItem = () => {
                         <Flex boxShadow={'0 0px 2px 0 rgba(0, 0, 0, 0.2)'} w={{base:'100%',lg:"30%"}} px={{base:"",lg:"4px"}} py={{base:'9%',lg:"2%"}} borderRadius={'5px'} bg={'hsl(223, 64%, 98%)'} justifyContent={'space-between'} alignItems={'center'}>
                             <Image src="images/icon-minus.svg"/>
                             <Text>0</Text>
-                            <Image src="images/icon-plus.svg"/>
+                            <Image onClick={plusHandle} src="images/icon-plus.svg"/>
                         </Flex>
                 <Button variant={'none'} py={{base:'9%',lg:"4%"}} mt={{base:'6%',lg:"0"}} px={{base:'8%'}} w={{base:'100%',lg:"50%"}} bg={'hsl(26, 100%, 55%)'}>Add to cart</Button>
             </Box>
