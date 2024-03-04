@@ -1,12 +1,15 @@
-import { Box,Image,useDisclosure,Modal,ModalBody,ModalContent, ModalHeader, Text , Flex} from "@chakra-ui/react";
+import { Box,Image,useDisclosure,Modal,ModalBody,ModalContent, ModalHeader, Text , Flex,Badge} from "@chakra-ui/react";
 
 const CartModal = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return ( 
         <Box>
-            <Image 
-            onClick={onOpen} 
-            src="images/icon-cart.svg" />
+             <Flex>
+                <Image 
+                onClick={onOpen} 
+                src="images/icon-cart.svg" />
+                <Badge color={'white'} borderRadius={'50%'} px={2} py={0.5} bg={'hsl(26, 100%, 55%)'}>3</Badge>
+             </Flex>
 
             <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalContent>
