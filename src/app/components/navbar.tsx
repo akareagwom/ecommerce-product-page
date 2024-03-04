@@ -1,4 +1,4 @@
-import { Box, Drawer, DrawerCloseButton, DrawerContent, Flex, Image, Tab, TabList, Tabs, Text,useDisclosure,Button, Modal, ModalContent, ModalBody } from "@chakra-ui/react";
+import { Box, Drawer, DrawerCloseButton, DrawerContent, Flex, Image, Tab, TabList, Tabs, Text,useDisclosure,Button, Modal, ModalContent, ModalBody,Badge } from "@chakra-ui/react";
 import { useRef } from "react";
 import CartModal from "./cartModal";
 

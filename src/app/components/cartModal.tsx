@@ -21,8 +21,12 @@ const CartModal = () => {
                         >
                             <Text display={'none'} textAlign={'center'}>Your cart is empty</Text>
                             <Flex>
-                                <Image src="images/image-product-1-thumbnail.jpg" />
-                                <Text>fall limited edition sneakers</Text>
+                                <Image borderRadius={10} src="images/image-product-1-thumbnail.jpg" />
+                                <Text>
+                                    fall limited edition sneakers
+                                    $125 x 3 $375.00
+
+                                </Text>
                                 <Image src="images/icon-delete.svg" />
                             </Flex>
                         </ModalBody>
