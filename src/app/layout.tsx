@@ -4,7 +4,9 @@ import "./globals.css";
 import { useState, createContext } from "react";
 
 
+
 const inter = Inter({ subsets: ["latin"] });
+// const UserContext = createContext()
 
 export const metadata: Metadata = {
   title: "E-commerce product page",
