@@ -35,7 +35,16 @@ const   CartItem = () => {
                             <Text>{count}</Text>
                             <Image cursor={'pointer'} onClick={plusHandle} src="images/icon-plus.svg"/>
                         </Flex>
-                <Button variant={'none'} py={{base:'9%',lg:"4%"}} mt={{base:'6%',lg:"0"}} px={{base:'8%'}} w={{base:'100%',lg:"50%"}} bg={'hsl(26, 100%, 55%)'}>Add to cart</Button>
+                <Button 
+                color={'white'} 
+                variant={'none'} 
+                py={{base:'9%',lg:"4%"}} 
+                mt={{base:'6%',lg:"0"}} 
+                px={{base:'8%'}} 
+                w={{base:'100%',lg:"50%"}} 
+                bg={'hsl(26, 100%, 55%)'}>
+                    Add to cart
+                </Button>
             </Box>
         </Box>
      );
