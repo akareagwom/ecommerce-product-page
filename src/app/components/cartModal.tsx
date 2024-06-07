@@ -1,11 +1,16 @@
 import { Box,Image,useDisclosure,Modal,ModalBody,ModalContent, ModalHeader, Text , Flex,Badge,Button} from "@chakra-ui/react";
-import {UserContext} from '../cabinet/home';
-import { useContext } from "react";
+// import {UserContext} from '../cabinet/home';
+import React, { useContext } from "react";
 
-const CartModal = () => {
-    const count = useContext (UserContext);
+export interface User{
+   count: number;
+
+}
+const CartModal: React.FC<User> = ({count}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
+    // const count = useContext (UserContext);
     // const [count,setCount]= useContext(UserContext)
+
 
 
     // const plusHandle =()=>{
@@ -23,7 +28,7 @@ const CartModal = () => {
                 onClick={onOpen} 
                 src="images/icon-cart.svg" />
                 <Badge color={'white'} borderRadius={'50%'} px={2} py={0.5} bg={'hsl(26, 100%, 55%)'}>
-                    {/* {count} */}
+                    {count}
                     </Badge>
              </Flex>
 

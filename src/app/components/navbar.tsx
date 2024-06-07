@@ -2,7 +2,12 @@ import { Box, Drawer, DrawerCloseButton, DrawerContent, Flex, Image, Tab, TabLis
 import { useRef } from "react";
 import CartModal from "./cartModal";
 
-const NavBar = () => {
+export interface User{
+    count: number;
+ 
+ }
+
+const NavBar : React.FC<User> = ({count}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     // const btnRef = useRef();
   
@@ -55,7 +60,7 @@ const NavBar = () => {
            
             <Flex alignItems={'center'} w={'20%'} justifyContent='space-between'>
                 <Box>
-                    <CartModal />
+                    <CartModal count={count} />
                 </Box>
                 <Image src="images/image-avatar.png" w={'30px'} />
             </Flex>
