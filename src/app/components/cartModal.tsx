@@ -3,6 +3,7 @@ import {UserContext} from '../cabinet/home';
 import { useContext } from "react";
 
 const CartModal = () => {
+    const count = useContext (UserContext);
     const { isOpen, onOpen, onClose } = useDisclosure()
     // const [count,setCount]= useContext(UserContext)
 
@@ -21,7 +22,9 @@ const CartModal = () => {
                 <Image 
                 onClick={onOpen} 
                 src="images/icon-cart.svg" />
-                <Badge color={'white'} borderRadius={'50%'} px={2} py={0.5} bg={'hsl(26, 100%, 55%)'}>{''}</Badge>
+                <Badge color={'white'} borderRadius={'50%'} px={2} py={0.5} bg={'hsl(26, 100%, 55%)'}>
+                    {/* {count} */}
+                    </Badge>
              </Flex>
 
             <Modal isOpen={isOpen} onClose={onClose}>
