@@ -12,14 +12,16 @@ import CartModal from "../components/cartModal";
 const LandingPage = () => {
     const [count,setCount]= useState(0)
 
-
-    const plusHandle =()=>{
-        setCount(count + 1);
-        console.log(count)
-    }
-    const minusHandle =()=>{
-        setCount(count - 1);
-        console.log(count)
+    const handleClick =()=>{
+        
+        const plusHandle =()=>{
+            setCount(count + 1);
+            console.log(count)
+        }
+        const minusHandle =()=>{
+            setCount(count - 1);
+            console.log(count)
+        }
     }
     return ( 
         

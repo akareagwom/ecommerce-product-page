@@ -1,7 +1,7 @@
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, Image, Modal, ModalBody, ModalCloseButton, ModalContent, useDisclosure } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
+import { Navigation, Pagination,Scrollbar, A11y } from 'swiper/modules';
+import {} from '../cabinet/home';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -9,10 +9,32 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const Carousel = () => {
+  const {isOpen,onClose,onOpen}= useDisclosure()
+
     return ( 
         <Box>
           <Box  w={'160%'} mt={'8%'} ml={'20%'} display={{base:'none',lg:'flex'}} alignItems={'start'} flexDir={'column'}>
-            <Image w={'37%'} borderRadius={'10px'} src="images/image-product-1.jpg"/>
+            <Image 
+            onClick={onOpen} 
+            w={'37%'} 
+            borderRadius={'10px'}
+            cursor={'pointer'} 
+            src="images/image-product-1.jpg"/>
+
+            <Modal isOpen={isOpen} onClose={onClose}>
+              <ModalContent p={0} m={0} bg={'transparent'}>
+                <ModalCloseButton />
+                <ModalBody p={0} mt={8} >
+                  
+                  <Image 
+                    w={'100%'} 
+                    borderRadius={'10px'}
+                    cursor={'pointer'} 
+                    src="images/image-product-1.jpg"/>
+                </ModalBody>
+              </ModalContent>
+            </Modal>
+
             <Flex w={'37%'} alignItems={'start'} justifyContent={'space-between'} mt={4}>
               <Image w={'20%'} borderRadius={'10px'} src="images/image-product-1-thumbnail.jpg"/>
               <Image w={'20%'} borderRadius={'10px'} src="images/image-product-2-thumbnail.jpg"/>

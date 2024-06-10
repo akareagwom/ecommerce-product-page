@@ -1,8 +1,10 @@
-import { Box, Button, Card, CardBody, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Card, CardBody, Flex, Heading, Image, Text,  } from "@chakra-ui/react";
 import { useState } from "react";
 
 const   CartItem = () => {
     const [count,setCount]= useState(0)
+   
+
 
 
     const plusHandle =()=>{
@@ -12,6 +14,10 @@ const   CartItem = () => {
     const minusHandle =()=>{
         setCount(count - 1);
         console.log(count)
+    }
+
+    const handleClickCart = ()=>{
+
     }
 
     return ( 

@@ -1,6 +1,6 @@
 "use client"
 import { useState, createContext } from "react";
-import {User} from '../cabinet/home'
+// import {User} from '../cabinet/home'
 
 
 
@@ -8,6 +8,6 @@ import {User} from '../cabinet/home'
 //     count: number;
 // }
 
-export const UserContext = createContext<User| undefined>(undefined);
+// export const UserContext = createContext<User| undefined>(undefined);
 
 // export const SomeContext = React.createContext<createContext>();
