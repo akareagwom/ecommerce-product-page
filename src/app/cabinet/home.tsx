@@ -1,5 +1,5 @@
 "use client"
-import { useState, createContext } from "react";
+import { useState, createContext,SetStateAction,Dispatch } from "react";
 import { Box, Card, CardHeader } from "@chakra-ui/react";
 import NavBar from "../components/navbar";
 import Carousel from "../components/carousel";
@@ -8,32 +8,29 @@ import CartModal from "../components/cartModal";
 
 
 
+export interface User{
+    count: Number;
+    setCount: Dispatch<SetStateAction<Number>>;
+}
+export const CountContext = createContext<User>({}as User);
+
 
 const LandingPage = () => {
-    const [count,setCount]= useState(0)
-
-    const handleClick =()=>{
-        
-        const plusHandle =()=>{
-            setCount(count + 1);
-            console.log(count)
-        }
-        const minusHandle =()=>{
-            setCount(count - 1);
-            console.log(count)
-        }
-    }
+    const [count,setCount]= useState(0);
+    const value = { count, setCount }
+   
     return ( 
         
-            
-        <Box bg={'white'}>
-            <NavBar count={count}/>
-            <Box display={{base:"block",lg:"flex"}}>
-                {/* <CartModal  /> */}
-                <Carousel/>
-                <CartItem  />
-            </Box>
-        </Box>
+            <CountContext.Provider value={{count,setCount}}>
+                <Box bg={'white'}>
+                    {/* <NavBar  /> */}
+                    <Box display={{base:"block",lg:"flex"}}>
+                        {/* <CartModal  /> */}
+                        <Carousel/>
+                        <CartItem  />
+                    </Box>
+                </Box>
+            </CountContext.Provider>
      );
 }
  

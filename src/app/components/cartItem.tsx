@@ -1,5 +1,7 @@
 import { Box, Button, Card, CardBody, Flex, Heading, Image, Text,  } from "@chakra-ui/react";
 import { useState } from "react";
+import CartModal from "./cartModal";
+import NavBar from "./navbar";
 
 const   CartItem = () => {
     const [count,setCount]= useState(0)
@@ -17,6 +19,11 @@ const   CartItem = () => {
     }
 
     const handleClickCart = ()=>{
+        if(count >0){
+            return(
+                <NavBar count={count} />
+            );
+        }
 
     }
 
@@ -44,6 +51,7 @@ const   CartItem = () => {
                 <Button 
                 color={'white'} 
                 variant={'none'} 
+                onClick={handleClickCart}
                 py={{base:'9%',lg:"4%"}} 
                 mt={{base:'6%',lg:"0"}} 
                 px={{base:'8%'}} 
