@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Modal, ModalBody, ModalCloseButton, ModalContent, useDisclosure } from "@chakra-ui/react";
+import { Box, Flex, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay,useDisclosure } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination,Scrollbar, A11y } from 'swiper/modules';
 import {} from '../cabinet/home';
@@ -22,6 +22,7 @@ const Carousel = () => {
             src="images/image-product-1.jpg"/>
 
             <Modal isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
               <ModalContent p={0} m={0} bg={'transparent'}>
                 <ModalCloseButton />
                 <ModalBody p={0} mt={8} >

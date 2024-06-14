@@ -1,27 +1,32 @@
 import { Box, Button, Card, CardBody, Flex, Heading, Image, Text,  } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState,SetStateAction,Dispatch, } from "react";
+import React from "react";
 import CartModal from "./cartModal";
 import NavBar from "./navbar";
 
-const   CartItem = () => {
-    const [count,setCount]= useState(0)
+export interface User{
+    count: number;
+    setCount: Dispatch<SetStateAction<number>>;
+ }
+
+const   CartItem : React.FC<User> = ({count,setCount}) => {
+    // const [count,setCount]= useState(0)
    
 
 
 
     const plusHandle =()=>{
         setCount(count + 1);
-        console.log(count)
     }
     const minusHandle =()=>{
         setCount(count - 1);
-        console.log(count)
     }
 
     const handleClickCart = ()=>{
         if(count >0){
             return(
-                <NavBar count={count} />
+                // <NavBar count={count} />
+                console.log(count)
             );
         }
 

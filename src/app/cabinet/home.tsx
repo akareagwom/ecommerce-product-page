@@ -9,9 +9,10 @@ import CartModal from "../components/cartModal";
 
 
 export interface User{
-    count: Number;
-    setCount: Dispatch<SetStateAction<Number>>;
+    count?: number;
+    setCount?: Dispatch<SetStateAction<number>>;
 }
+    
 export const CountContext = createContext<User>({}as User);
 
 
@@ -23,11 +24,11 @@ const LandingPage = () => {
         
             <CountContext.Provider value={{count,setCount}}>
                 <Box bg={'white'}>
-                    {/* <NavBar  /> */}
+                    <NavBar count={count} />
                     <Box display={{base:"block",lg:"flex"}}>
                         {/* <CartModal  /> */}
                         <Carousel/>
-                        <CartItem  />
+                        <CartItem {...value}  />
                     </Box>
                 </Box>
             </CountContext.Provider>
