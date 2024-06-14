@@ -23,15 +23,59 @@ const Carousel = () => {
 
             <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
-              <ModalContent p={0} m={0} bg={'transparent'}>
-                <ModalCloseButton />
-                <ModalBody p={0} mt={8} >
+              <ModalContent boxShadow={'none'} p={0} m={0} bg={'transparent'}>
+                <ModalCloseButton
+
+                _hover={{color:'hsl(26, 100%, 55%)'}}
+                color={'white'} 
+                ml={'30%'}
+                />
+                <ModalBody p={0} mt={10} >
                   
-                  <Image 
+                  {/* <Image 
                     w={'100%'} 
                     borderRadius={'10px'}
                     cursor={'pointer'} 
-                    src="images/image-product-1.jpg"/>
+                    src="images/image-product-1.jpg"/> */}
+                    <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={60}
+            slidesPerView={1}
+            navigation={{
+              prevEl: ".swiper-button-prev",
+              nextEl: ".swiper-button-next",
+            }}
+            
+    
+            // pagination={{ clickable: true }}
+            // scrollbar={{ draggable: true }}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+            >
+              <SwiperSlide>
+                <Image borderRadius={'10px'} w={'100%'} src="images/image-product-1.jpg"/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <Image borderRadius={'10px'} w={'100%'} src="images/image-product-2.jpg"/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <Image borderRadius={'10px'} w={'100%'} src="images/image-product-3.jpg"/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <Image borderRadius={'10px'} w={'100%'} src="images/image-product-4.jpg"/>
+              </SwiperSlide>
+
+            </Swiper>
+            <Flex alignItems={'center'} pos={'relative'} bottom={'60'} justifyContent='space-between' mt={6}>
+              <Image  w={9} h={9} bg={'white'} borderRadius={'50%'} p={2.5} className="swiper-button-prev" src="images/icon-previous.svg" />
+              <Image  w={9} h={9} bg={'white'} borderRadius={'50%'} p={2.5} className="swiper-button-next" src="images/icon-next.svg" />
+            </Flex>
+                    <Flex w={'100%'} alignItems={'start'} justifyContent={'space-between'} mt={4}>
+                      <Image w={'20%'} borderRadius={'10px'} src="images/image-product-1-thumbnail.jpg"/>
+                      <Image w={'20%'} borderRadius={'10px'} src="images/image-product-2-thumbnail.jpg"/>
+                      <Image w={'20%'} borderRadius={'10px'} src="images/image-product-3-thumbnail.jpg"/>
+                      <Image w={'20%'} borderRadius={'10px'} src="images/image-product-4-thumbnail.jpg"/>
+                    </Flex>
                 </ModalBody>
               </ModalContent>
             </Modal>

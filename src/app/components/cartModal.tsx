@@ -8,19 +8,8 @@ export interface User{
 }
 const CartModal: React.FC<User> = ({count}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    // const count = useContext (UserContext);
-    // const [count,setCount]= useContext(UserContext)
 
-
-
-    // const plusHandle =()=>{
-    //     setCount(count + 1);
-    //     console.log(count)
-    // }
-    // const minusHandle =()=>{
-    //     setCount(count - 1);
-    //     console.log(count)
-    // }
+    
     return ( 
         <Box>
              <Flex>
