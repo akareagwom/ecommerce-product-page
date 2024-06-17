@@ -39,7 +39,7 @@ const Carousel = () => {
                     src="images/image-product-1.jpg"/> */}
                     <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={60}
+            spaceBetween={50}
             slidesPerView={1}
             navigation={{
               prevEl: ".swiper-button-prev",
@@ -66,12 +66,12 @@ const Carousel = () => {
               </SwiperSlide>
 
             </Swiper>
-            <Flex alignItems={'center'} pos={'relative'} bottom={'60'} justifyContent='space-between' mt={6}>
-              <Image  w={9} h={9} bg={'white'} borderRadius={'50%'} p={2.5} className="swiper-button-prev" src="images/icon-previous.svg" />
-              <Image  w={9} h={9} bg={'white'} borderRadius={'50%'} p={2.5} className="swiper-button-next" src="images/icon-next.svg" />
+            <Flex alignItems={'center'}  pos={'relative'} bottom={'60'} justifyContent='space-between' mt={6}>
+              <Image  w={9} left={'-4%'} h={9} bg={'white'} borderRadius={'50%'} p={2.5} className="swiper-button-prev" src="images/icon-previous.svg" />
+              <Image  w={9} left={'95%'} h={9} bg={'white'} borderRadius={'50%'} p={2.5} className="swiper-button-next" src="images/icon-next.svg" />
             </Flex>
                     <Flex w={'100%'} alignItems={'start'} justifyContent={'space-between'} mt={4}>
-                      <Image w={'20%'} borderRadius={'10px'} src="images/image-product-1-thumbnail.jpg"/>
+                      <Image bg={'blue'} w={'20%'} borderRadius={'10px'} src="images/image-product-1-thumbnail.jpg"/>
                       <Image w={'20%'} borderRadius={'10px'} src="images/image-product-2-thumbnail.jpg"/>
                       <Image w={'20%'} borderRadius={'10px'} src="images/image-product-3-thumbnail.jpg"/>
                       <Image w={'20%'} borderRadius={'10px'} src="images/image-product-4-thumbnail.jpg"/>
