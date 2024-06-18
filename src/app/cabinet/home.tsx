@@ -11,6 +11,8 @@ import CartModal from "../components/cartModal";
 export interface User{
     count?: number;
     setCount?: Dispatch<SetStateAction<number>>;
+    showCount?: boolean;
+    setShowCount?: Dispatch<SetStateAction<boolean>>;
 }
     
 export const CountContext = createContext<User>({}as User);
@@ -18,7 +20,8 @@ export const CountContext = createContext<User>({}as User);
 
 const LandingPage = () => {
     const [count,setCount]= useState(0);
-    const value = { count, setCount }
+    const [showCount,setShowCount]= useState(false)
+    const value = { count, setCount,showCount,setShowCount }
    
     return ( 
         

@@ -7,28 +7,30 @@ import NavBar from "./navbar";
 export interface User{
     count: number;
     setCount: Dispatch<SetStateAction<number>>;
+    showCount: boolean;
+    setShowCount: Dispatch<SetStateAction<boolean>>;
  }
 
-const   CartItem : React.FC<User> = ({count,setCount}) => {
+const   CartItem : React.FC<User> = ({count,setCount,showCount,setShowCount}) => {
     // const [count,setCount]= useState(0)
    
 
 
 
-    // const plusHandle =()=>{
-    //     setCount(count + 1);
-    // }
-    // const minusHandle =()=>{
-    //     setCount(count - 1);
-    // }
+    const plusHandle =()=>{
+        setCount(count + 1);
+    }
+    const minusHandle =()=>{
+        setCount(count - 1);
+    }
 
     const handleClickCart = ()=>{
         if(count === 0){
             return(
-                setCount(count+ 1)
+                setCount(count=> count + 1)
             );
         }else{
-            setCount(count - 1)
+            setCount(count=> count - 1)
         }
 
     }
@@ -50,9 +52,9 @@ const   CartItem : React.FC<User> = ({count,setCount}) => {
             </Box>
             <Box  display={{base:"block",lg:"flex"}} justifyContent={'space-between'}>
                         <Flex boxShadow={'0 0px 2px 0 rgba(0, 0, 0, 0.2)'} w={{base:'100%',lg:"30%"}} px={{base:"",lg:"4px"}} py={{base:'9%',lg:"2%"}} borderRadius={'5px'} bg={'hsl(223, 64%, 98%)'} justifyContent={'space-between'} alignItems={'center'}>
-                            <Image cursor={'pointer'} onClick={handleClickCart} src="images/icon-minus.svg"/>
+                            <Image cursor={'pointer'} onClick={minusHandle} src="images/icon-minus.svg"/>
                             <Text>{count}</Text>
-                            <Image cursor={'pointer'} onClick={handleClickCart} src="images/icon-plus.svg"/>
+                            <Image cursor={'pointer'} onClick={plusHandle} src="images/icon-plus.svg"/>
                         </Flex>
                 <Button 
                 color={'white'} 
