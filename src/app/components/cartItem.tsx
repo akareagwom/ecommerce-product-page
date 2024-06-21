@@ -25,7 +25,7 @@ const   CartItem : React.FC<User> = ({count,setCount,showCount,setShowCount}) =>
     }
 
     const handleClickCart = ()=>{
-        if(count === 0){
+        if(count){
             return(
                 setCount(count=> count + 1)
             );
