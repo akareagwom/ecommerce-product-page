@@ -25,14 +25,8 @@ const   CartItem : React.FC<User> = ({count,setCount,showCount,setShowCount}) =>
     }
 
     const handleClickCart = ()=>{
-        if(count){
-            return(
-                setCount(count=> count + 1)
-            );
-        }else{
-            setCount(count=> count - 1)
-        };
         setShowCount(prevState => !prevState);
+        
 
     }
 

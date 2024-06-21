@@ -45,10 +45,6 @@ const Carousel = () => {
               prevEl: ".swiper-button-prev",
               nextEl: ".swiper-button-next",
             }}
-            
-    
-            // pagination={{ clickable: true }}
-            // scrollbar={{ draggable: true }}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
             >
