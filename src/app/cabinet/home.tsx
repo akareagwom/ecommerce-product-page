@@ -19,15 +19,21 @@ export const CountContext = createContext<User>({}as User);
 
 
 const LandingPage = () => {
-    const [count,setCount]= useState(0);
-    const [showCount,setShowCount]= useState(false)
+    const [count,setCount]= useState<number>(0);
+    const [showCount,setShowCount]= useState<boolean>(false)
     const value = { count, setCount,showCount,setShowCount }
+    const userData: User = {
+        count,
+        setCount,
+        showCount,
+        setShowCount,
+      };
    
     return ( 
         
             <CountContext.Provider value={{count,setCount}}>
                 <Box bg={'white'}>
-                    <NavBar count={count} />
+                    <NavBar {...value} />
                     <Box display={{base:"block",lg:"flex"}}>
                         {/* <CartModal  /> */}
                         <Carousel/>

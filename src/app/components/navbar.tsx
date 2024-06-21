@@ -1,14 +1,24 @@
 import { Box, Drawer, DrawerCloseButton, DrawerContent, Flex, Image, Tab, TabList, Tabs, Text,useDisclosure,Button, Modal, ModalContent, ModalBody,Badge } from "@chakra-ui/react";
-import { useRef } from "react";
+import { useRef,SetStateAction,Dispatch } from "react";
 import CartModal from "./cartModal";
 
 export interface User{
     count: number;
+    showCount:boolean;
+    setShowCount?: Dispatch<SetStateAction<boolean>>;
+    setCount: Dispatch<SetStateAction<number>>
  
  }
 
-const NavBar : React.FC<User> = ({count}) => {
-    const { isOpen, onOpen, onClose } = useDisclosure()
+const NavBar : React.FC<User> = ({count,showCount,setShowCount,setCount}) => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    // const value = { count,showCount,setCount,setShowCount}
+    const userData: User = {
+        count,
+        setCount,
+        showCount,
+        setShowCount,
+      };
     // const btnRef = useRef();
   
 
@@ -60,7 +70,7 @@ const NavBar : React.FC<User> = ({count}) => {
            
             <Flex alignItems={'center'} w={'20%'} justifyContent='space-between'>
                 <Box>
-                    <CartModal count={count} />
+                    <CartModal {...userData} />
                 </Box>
                 <Image src="images/image-avatar.png" w={'30px'} />
             </Flex>

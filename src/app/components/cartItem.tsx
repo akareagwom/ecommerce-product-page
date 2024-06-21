@@ -31,7 +31,8 @@ const   CartItem : React.FC<User> = ({count,setCount,showCount,setShowCount}) =>
             );
         }else{
             setCount(count=> count - 1)
-        }
+        };
+        setShowCount(prevState => !prevState);
 
     }
 
@@ -65,7 +66,8 @@ const   CartItem : React.FC<User> = ({count,setCount,showCount,setShowCount}) =>
                 px={{base:'8%'}} 
                 w={{base:'100%',lg:"50%"}} 
                 bg={'hsl(26, 100%, 55%)'}>
-                    Add to cart
+                    
+                 Add to cart
                 </Button>
             </Box>
         </Box>

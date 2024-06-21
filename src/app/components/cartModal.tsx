@@ -4,9 +4,10 @@ import React, { useContext } from "react";
 
 export interface User{
    count: number;
+   showCount: boolean;
 
 }
-const CartModal: React.FC<User> = ({count}) => {
+const CartModal: React.FC<User> = ({count,showCount}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     
@@ -17,7 +18,8 @@ const CartModal: React.FC<User> = ({count}) => {
                 onClick={onOpen} 
                 src="images/icon-cart.svg" />
                 <Badge color={'white'} borderRadius={'50%'} px={2} py={0.5} bg={'hsl(26, 100%, 55%)'}>
-                    {count}
+                    {showCount?'false': <Text>{count}</Text>}
+
                     </Badge>
              </Flex>
 
