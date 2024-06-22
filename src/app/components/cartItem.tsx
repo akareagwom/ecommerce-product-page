@@ -28,6 +28,7 @@ const   CartItem : React.FC<User> = ({count,setCount,showCount,setShowCount}) =>
         if(count=== 0){
             return null;
         }else{
+        
         setShowCount(prevState => !prevState);
         }
 

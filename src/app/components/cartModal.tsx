@@ -18,7 +18,8 @@ const CartModal: React.FC<User> = ({count,showCount}) => {
                 onClick={onOpen} 
                 src="images/icon-cart.svg" />
                 <Badge display={count === 0? 'none' : 'block'} color={'white'} borderRadius={'50%'} px={2} py={0.5} bg={'hsl(26, 100%, 55%)'}>
-                    {showCount?'': <Text>{count}</Text>}
+                    {/* {showCount?'': <Text>{count}</Text>} */}
+                    <Text>{showCount}</Text>
 
                     </Badge>
              </Flex>
