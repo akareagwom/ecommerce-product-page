@@ -17,9 +17,9 @@ const CartModal: React.FC<User> = ({count,showCount}) => {
                 <Image 
                 onClick={onOpen} 
                 src="images/icon-cart.svg" />
-                <Badge display={count === 0? 'none' : 'block'} color={'white'} borderRadius={'50%'} px={2} py={0.5} bg={'hsl(26, 100%, 55%)'}>
+                <Badge variant={'none'}>
                     {/* {showCount?'': <Text>{count}</Text>} */}
-                    <Text>{count}</Text>
+                    {showCount && <Text display={count === 0? 'none' : 'block'} color={'white'} borderRadius={'50%'} px={2} py={0.5} bg={'hsl(26, 100%, 55%)'}>{count}</Text>}
 
                     </Badge>
              </Flex>
@@ -35,8 +35,8 @@ const CartModal: React.FC<User> = ({count,showCount}) => {
                         <ModalBody
                         py={{base:'15%', lg: '25%'}}
                         >
-                            <Text display={'none'} textAlign={'center'}>Your cart is empty</Text>
-                            <Flex justifyContent={'space-between'} alignItems={'center'}>
+                            {/* {count === 0 ?<Text textAlign={'center'}>Your cart is empty</Text>
+                            :<Flex justifyContent={'space-between'} alignItems={'center'}>
                                 <Image w={'20%'} borderRadius={10} src="images/image-product-1-thumbnail.jpg" />
 
                                 <Text lineHeight={7} w={'70%'} textTransform={'capitalize'}>
@@ -45,7 +45,7 @@ const CartModal: React.FC<User> = ({count,showCount}) => {
 
                                 </Text>
                                 <Image  src="images/icon-delete.svg" />
-                            </Flex>
+                            </Flex>} */}
                             <Button 
                             color={'white'} 
                             variant={'none'} 
