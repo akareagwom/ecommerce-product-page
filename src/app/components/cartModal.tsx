@@ -35,7 +35,7 @@ const CartModal: React.FC<User> = ({count,showCount}) => {
                         <ModalBody
                         py={{base:'15%', lg: '25%'}}
                         >
-                            {/* {count === 0 ?<Text textAlign={'center'}>Your cart is empty</Text>
+                            {count === 0 ?<Text textAlign={'center'}>Your cart is empty</Text>
                             :<Flex justifyContent={'space-between'} alignItems={'center'}>
                                 <Image w={'20%'} borderRadius={10} src="images/image-product-1-thumbnail.jpg" />
 
@@ -45,7 +45,7 @@ const CartModal: React.FC<User> = ({count,showCount}) => {
 
                                 </Text>
                                 <Image  src="images/icon-delete.svg" />
-                            </Flex>} */}
+                            </Flex>}
                             <Button 
                             color={'white'} 
                             variant={'none'} 
