@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import CarouselModal from "./carouselModal";
+import { CarouselData } from "../data/carouselData";
 
 const Carousel = () => {
   const {isOpen,onClose,onOpen}= useDisclosure()
@@ -16,12 +17,15 @@ const Carousel = () => {
     return ( 
         <Box>
           <Box  w={'160%'} mt={'8%'} ml={'20%'} display={{base:'none',lg:'flex'}} alignItems={'start'} flexDir={'column'}>
-            <Image 
+          <Box onClick={onOpen} w={'400px'}>
+            <CarouselModal />
+          </Box>
+            {/* <Image 
             onClick={onOpen} 
             w={'37%'} 
             borderRadius={'10px'}
             cursor={'pointer'} 
-            src="images/image-product-1.jpg"/>
+            src="images/image-product-1.jpg"/> */}
 
             <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
