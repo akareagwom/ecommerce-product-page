@@ -26,7 +26,7 @@ const CarouselModal =()=>{
                 el: '.swiper-pagination',
                 clickable: true,
                 renderBullet: (index, className) => {
-                  return `<span class="${className}"><img style="width:150px; height:100px;" src="${CarouselData[index].thumbItem}" alt="Thumb ${index + 1}" /></span>`;
+                  return `<span style="width:100px;" class="${className}"><img style="width:150px;border-radius:10px; display:flex; flex-direction:row; height:100px;" src="${CarouselData[index].thumbItem}" alt="Thumb ${index + 1}" /></span>`;
                 },
               }}
             onSlideChange={() => console.log('slide change')}
