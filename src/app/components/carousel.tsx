@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import CarouselModal from "./carouselModal";
 
 const Carousel = () => {
   const {isOpen,onClose,onOpen}= useDisclosure()
@@ -31,41 +32,8 @@ const Carousel = () => {
                 ml={'30%'}
                 />
                 <ModalBody p={0} mt={10} >
-                  
-                  {/* <Image 
-                    w={'100%'} 
-                    borderRadius={'10px'}
-                    cursor={'pointer'} 
-                    src="images/image-product-1.jpg"/> */}
-                    <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation={{
-              prevEl: ".swiper-button-prev",
-              nextEl: ".swiper-button-next",
-            }}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-            >
-              <SwiperSlide>
-                <Image borderRadius={'10px'} w={'100%'} src="images/image-product-1.jpg"/>
-              </SwiperSlide>
-              <SwiperSlide>
-              <Image borderRadius={'10px'} w={'100%'} src="images/image-product-2.jpg"/>
-              </SwiperSlide>
-              <SwiperSlide>
-              <Image borderRadius={'10px'} w={'100%'} src="images/image-product-3.jpg"/>
-              </SwiperSlide>
-              <SwiperSlide>
-              <Image borderRadius={'10px'} w={'100%'} src="images/image-product-4.jpg"/>
-              </SwiperSlide>
-
-            </Swiper>
-            <Flex alignItems={'center'}  pos={'relative'} bottom={'60'} justifyContent='space-between' mt={6}>
-              <Image  w={9} left={'-4%'} h={9} bg={'white'} borderRadius={'50%'} p={2.5} className="swiper-button-prev" src="images/icon-previous.svg" />
-              <Image  w={9} left={'95%'} h={9} bg={'white'} borderRadius={'50%'} p={2.5} className="swiper-button-next" src="images/icon-next.svg" />
-            </Flex>
+                    <CarouselModal/>
+                
                     <Flex w={'100%'} alignItems={'start'} justifyContent={'space-between'} mt={4}>
                       <Image bg={'blue'} w={'20%'} borderRadius={'10px'} src="images/image-product-1-thumbnail.jpg"/>
                       <Image w={'20%'} borderRadius={'10px'} src="images/image-product-2-thumbnail.jpg"/>
