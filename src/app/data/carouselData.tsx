@@ -5,7 +5,7 @@ export const CarouselData = [
     },
     {
         slideItem:'images/image-product-2.jpg',
-        thumbItem:''
+        thumbItem:'images/image-product-2-thumbnail.jpg'
     },
     {
         slideItem:'images/image-product-3.jpg',

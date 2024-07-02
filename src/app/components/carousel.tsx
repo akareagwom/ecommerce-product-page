@@ -33,13 +33,6 @@ const Carousel = () => {
                 />
                 <ModalBody p={0} mt={10} >
                     <CarouselModal/>
-                
-                    <Flex w={'100%'} alignItems={'start'} justifyContent={'space-between'} mt={4}>
-                      <Image bg={'blue'} w={'20%'} borderRadius={'10px'} src="images/image-product-1-thumbnail.jpg"/>
-                      <Image w={'20%'} borderRadius={'10px'} src="images/image-product-2-thumbnail.jpg"/>
-                      <Image w={'20%'} borderRadius={'10px'} src="images/image-product-3-thumbnail.jpg"/>
-                      <Image w={'20%'} borderRadius={'10px'} src="images/image-product-4-thumbnail.jpg"/>
-                    </Flex>
                 </ModalBody>
               </ModalContent>
             </Modal>
