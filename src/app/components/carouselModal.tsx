@@ -2,6 +2,7 @@ import { Box,Image, Flex } from "@chakra-ui/react"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination,Scrollbar, A11y } from 'swiper/modules';
 import {} from '../cabinet/home';
+import {CarouselData} from '../data/carouselData';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -22,18 +23,10 @@ const CarouselModal =()=>{
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
             >
-              <SwiperSlide>
-                <Image borderRadius={'10px'} w={'100%'} src="images/image-product-1.jpg"/>
-              </SwiperSlide>
-              <SwiperSlide>
-              <Image borderRadius={'10px'} w={'100%'} src="images/image-product-2.jpg"/>
-              </SwiperSlide>
-              <SwiperSlide>
-              <Image borderRadius={'10px'} w={'100%'} src="images/image-product-3.jpg"/>
-              </SwiperSlide>
-              <SwiperSlide>
-              <Image borderRadius={'10px'} w={'100%'} src="images/image-product-4.jpg"/>
-              </SwiperSlide>
+              {CarouselData.map((item,index)=>(
+                <SwiperSlide key={index}>
+              <Image borderRadius={'10px'} w={'100%'} src={item.slideItem}/>
+              </SwiperSlide>))}
 
             </Swiper>
             <Flex alignItems={'center'}  pos={'relative'} bottom={'60'} justifyContent='space-between' mt={6}>
